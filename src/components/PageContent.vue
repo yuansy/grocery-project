@@ -2,7 +2,7 @@
   <div>
     <ul>
         <li v-for="(item , index) in itemsList" v-bind:key="item.id" >
-            <!-- <h2 v-on:click="item.show = !item.show">{{item.name}}</h2> -->
+            <h2 v-on:click="item.show = !item.show">{{item.name}}</h2>
             <img v-bind:src="item.image" v-show="item.show"/>
             <buttonComponent></buttonComponent>
             <button name="delete" v-bind:id="item.id" v-on:click="deleteItem(index,item)">Delete</button>
